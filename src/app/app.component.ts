@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentPage = 'recipes';
 
+  onRedirect(route: string) {
+    this.currentPage = route;
+  }
 }
