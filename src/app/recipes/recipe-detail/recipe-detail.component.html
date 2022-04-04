@@ -18,7 +18,7 @@
       <ul class="dropdown-menu">
         <li (click)="addToShoppingList()" class="menu-item"><a>To Shopping List</a></li>
         <li><a class="menu-item" [routerLink]="['edit']">Edit Recipe</a></li>
-        <li><a class="menu-item">Delete Recipe</a></li>
+        <li><a class="menu-item" (click)="onDeleteRecipe()">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
