@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 
 import {Recipe} from "./recipe.model";
@@ -16,7 +15,7 @@ export class RecipesResolverService implements Resolve<Recipe[]> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Recipe[]> | Promise<Recipe[]> | Recipe[] {
     const recipes = this.recipesService.getRecipes()
-    
+
     if (recipes.length === 0) {
       return this.dataStorageService.fetchRecipes()
     }
